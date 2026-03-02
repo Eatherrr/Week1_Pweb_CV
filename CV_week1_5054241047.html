@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Curriculum Vitae</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .info-value {
+            color: #333;
+        }
+        
+        .project-card {
+            background: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .project-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill-tag {
+            background: #667eea;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        
+        .dream-job-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .dream-job-box h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        
+        .dream-job-box p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-links a {
+            color: #667eea;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #667eea;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .contact-links a:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header dengan Foto -->
+        <div class="header">
+            <img src="https://via.placeholder.com/180" alt="Foto Profil" class="profile-photo">
+            <h1>Nama Anda</h1>
+            <p>Web Developer & Software Engineer</p>
+        </div>
+        
+        <!-- Konten CV -->
+        <div class="content">
+            <!-- Informasi Pribadi -->
+            <div class="section">
+                <h2>📋 Informasi Pribadi</h2>
+                <div class="info-grid">
+                    <div class="info-label">NIM:</div>
+                    <div class="info-value">5054241047</div>
+                    
+                    <div class="info-label">Email:</div>
+                    <div class="info-value">email@example.com</div>
+                    
+                    <div class="info-label">Telepon:</div>
+                    <div class="info-value">+62 812-3456-7890</div>
+                    
+                    <div class="info-label">Alamat:</div>
+                    <div class="info-value">Jakarta, Indonesia</div>
+                    
+                    <div class="info-label">Tanggal Lahir:</div>
+                    <div class="info-value">1 Januari 2000</div>
+                </div>
+            </div>
+            
+            <!-- Pendidikan -->
+            <div class="section">
+                <h2>🎓 Pendidikan</h2>
+                <div class="project-card">
+                    <h3>Universitas Nama Universitas</h3>
+                    <p><strong>Program Studi:</strong> Teknik Informatika</p>
+                    <p><strong>Tahun:</strong> 2020 - Sekarang</p>
+                    <p><strong>IPK:</strong> 3.75 / 4.00</p>
+                </div>
+            </div>
+            
+            <!-- Keahlian -->
+            <div class="section">
+                <h2>💻 Keahlian</h2>
+                <div class="skills">
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Git</span>
+                </div>
+            </div>
+            
+            <!-- Aplikasi yang Pernah Dibuat -->
+            <div class="section">
+                <h2>🚀 Aplikasi & Proyek yang Pernah Dibuat</h2>
+                
+                <div class="project-card">
+                    <h3>1. Sistem Manajemen Perpustakaan</h3>
+                    <p><strong>Teknologi:</strong> PHP, MySQL, Bootstrap</p>
+                    <p><strong>Deskripsi:</strong> Aplikasi web untuk mengelola peminjaman dan pengembalian buku di perpustakaan. Fitur mencakup manajemen anggota, katalog buku, dan laporan peminjaman.</p>
+                    <p><strong>Tahun:</strong> 2023</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>2. Aplikasi To-Do List Mobile</h3>
+                    <p><strong>Teknologi:</strong> React Native, Firebase</p>
+                    <p><strong>Deskripsi:</strong> Aplikasi mobile untuk manajemen tugas harian dengan fitur notifikasi, kategori, dan sinkronisasi cloud.</p>
+                    <p><strong>Tahun:</strong> 2024</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>3. Website Portfolio Pribadi</h3>
+                    <p><strong>Teknologi:</strong> HTML, CSS, JavaScript</p>
+                    <p><strong>Deskripsi:</strong> Website portfolio interaktif dengan animasi modern untuk menampilkan proyek-proyek yang telah dikerjakan.</p>
+                    <p><strong>Tahun:</strong> 2024</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>4. Chatbot Customer Service (Final Project)</h3>
+                    <p><strong>Teknologi:</strong> Python, Natural Language Processing, TensorFlow</p>
+                    <p><strong>Deskripsi:</strong> Chatbot berbasis AI untuk menjawab pertanyaan customer service secara otomatis menggunakan machine learning.</p>
+                    <p><strong>Tahun:</strong> 2025</p>
+                </div>
+            </div>
+            
+            <!-- Aplikasi Web untuk Final Project -->
+            <div class="section">
+                <h2>🎯 Rencana Aplikasi Web untuk Final Project</h2>
+                <div class="project-card">
+                    <h3>E-Learning Platform dengan AI Assistant</h3>
+                    <p><strong>Teknologi yang Akan Digunakan:</strong> React.js, Node.js, Express, MongoDB, OpenAI API</p>
+                    <p><strong>Deskripsi Proyek:</strong></p>
+                    <p>Sebuah platform pembelajaran online yang dilengkapi dengan asisten AI untuk membantu siswa dalam memahami materi. Platform ini akan memiliki fitur-fitur seperti:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
+                        <li>Video pembelajaran interaktif dengan timestamp</li>
+                        <li>AI chatbot yang bisa menjawab pertanyaan terkait materi</li>
+                        <li>Quiz otomatis dengan analisis hasil belajar</li>
+                        <li>Forum diskusi antar siswa dan pengajar</li>
+                        <li>Dashboard progress belajar dengan visualisasi data</li>
+                        <li>Sistem rekomendasi materi berdasarkan performa siswa</li>
+                    </ul>
+                    <p style="margin-top: 10px;"><strong>Target Penyelesaian:</strong> Juni 2026</p>
+                </div>
+            </div>
+            
+            <!-- Pekerjaan Impian -->
+            <div class="section">
+                <h2>✨ Pekerjaan Impian</h2>
+                <div class="dream-job-box">
+                    <h3>Full Stack Developer / AI Engineer</h3>
+                    <p>
+                        Saya bermimpi bekerja sebagai Full Stack Developer atau AI Engineer di perusahaan teknologi global seperti Google, Microsoft, atau startup unicorn. 
+                        Saya ingin berkontribusi dalam mengembangkan solusi teknologi yang berdampak positif bagi jutaan pengguna di seluruh dunia.
+                    </p>
+                    <p style="margin-top: 15px;">
+                        Khususnya, saya tertarik pada pengembangan aplikasi berbasis AI yang dapat membantu meningkatkan kualitas pendidikan dan aksesibilitas 
+                        pembelajaran bagi semua orang, terutama di negara berkembang.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Pengalaman Organisasi -->
+            <div class="section">
+                <h2>👥 Pengalaman Organisasi</h2>
+                <div class="project-card">
+                    <h3>Ketua Divisi IT - Himpunan Mahasiswa</h3>
+                    <p><strong>Periode:</strong> 2024 - 2025</p>
+                    <p>Bertanggung jawab mengelola website organisasi dan sistem informasi acara.</p>
+                </div>
+            </div>
+            
+            <!-- Kontak -->
+            <div class="section">
+                <h2>📞 Kontak</h2>
+                <div class="contact-links">
+                    <a href="mailto:email@example.com">📧 Email</a>
+                    <a href="https://linkedin.com/in/username" target="_blank">💼 LinkedIn</a>
+                    <a href="https://github.com/username" target="_blank">💻 GitHub</a>
+                    <a href="https://portfolio.com" target="_blank">🌐 Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
