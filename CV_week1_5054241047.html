@@ -1,333 +1,364 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Curriculum Vitae</title>
+    <title>Resume - Marvel Mahanara</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
+        :root {
+            --primary-blue: #1a4c80; 
+            --text-dark: #222;
+            --text-light: #555;
+            --bg-white: #ffffff;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Helvetica', 'Arial', sans-serif;
         }
-        
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-        }
-        
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
-            text-align: center;
-        }
-        
-        .profile-photo {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 5px solid white;
-            object-fit: cover;
-            margin-bottom: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-        
-        .header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-        
-        .content {
-            padding: 40px;
-        }
-        
-        .section {
-            margin-bottom: 35px;
-        }
-        
-        .section h2 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
-        }
-        
-        .info-grid {
-            display: grid;
-            grid-template-columns: 150px 1fr;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-        
-        .info-label {
-            font-weight: bold;
-            color: #555;
-        }
-        
-        .info-value {
-            color: #333;
-        }
-        
-        .project-card {
-            background: #f8f9fa;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .project-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .project-card h3 {
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-        
-        .project-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-        
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        
-        .skill-tag {
-            background: #667eea;
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9em;
-        }
-        
-        .dream-job-box {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        
-        .dream-job-box h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        
-        .dream-job-box p {
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
-        
-        .contact-links {
+            background-color: #e0e0e0;
+            padding: 40px 20px;
             display: flex;
             justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
         }
-        
-        .contact-links a {
-            color: #667eea;
+
+        .resume-container {
+            width: 850px;
+            background: var(--bg-white);
+            display: grid;
+            grid-template-columns: 1.6fr 1fr;
+            min-height: 1100px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+
+        /* Left Column */
+        .main-column {
+            padding: 50px;
+        }
+
+        /* Header Layout dengan Foto */
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .profile-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0; /* INI KUNCI BIAR FOTO NGGAK LONJONG */
+            border: 4px solid var(--primary-blue);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-name h1 {
+            font-size: 38px;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1;
+            font-weight: bold;
+        }
+
+        .header-name p {
+            font-size: 14px;
+            color: var(--text-dark);
+            margin-top: 8px;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        .section-title {
+            color: var(--primary-blue);
+            border-bottom: 2px solid var(--primary-blue);
+            margin: 25px 0 15px 0;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            font-size: 16px;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        .item {
+            margin-bottom: 18px;
+        }
+
+        .item-title {
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .item-title a {
+            color: var(--primary-blue);
             text-decoration: none;
-            padding: 10px 20px;
-            border: 2px solid #667eea;
-            border-radius: 5px;
-            transition: all 0.3s;
+            transition: color 0.2s;
+        }
+
+        .item-title a:hover {
+            color: #0d2a4a;
+            text-decoration: underline;
+        }
+
+        .item-title i {
+            font-size: 11px;
+            margin-left: 4px;
+            vertical-align: middle;
         }
         
-        .contact-links a:hover {
-            background: #667eea;
+        .item-subtitle {
+            font-weight: bold;
+            color: var(--text-dark);
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        .description {
+            font-size: 13px;
+            color: var(--text-light);
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        .description ul {
+            margin-left: 18px;
+            margin-top: 5px;
+        }
+
+        /* Right Column (Sidebar) */
+        .sidebar {
+            background-color: #fcfcfc;
+            border-left: 1px solid #f0f0f0;
+            padding: 50px 35px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 30px;
+        }
+
+        .sidebar-title {
+            color: var(--primary-blue);
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+
+        .sidebar-content {
+            font-size: 13px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .sidebar-item {
+            margin-bottom: 12px;
+        }
+
+        .sidebar-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-item {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .contact-item i {
+            color: var(--primary-blue);
+            font-size: 15px;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Social Icons Box */
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background-color: var(--primary-blue);
             color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
         }
-        
-        @media (max-width: 768px) {
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .header h1 {
-                font-size: 1.8em;
-            }
-            
-            .content {
-                padding: 20px;
-            }
+
+        .social-icon:hover {
+            background-color: #0d2a4a;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
         }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header dengan Foto -->
-        <div class="header">
-            <img src="https://via.placeholder.com/180" alt="Foto Profil" class="profile-photo">
-            <h1>Nama Anda</h1>
-            <p>Web Developer & Software Engineer</p>
-        </div>
-        
-        <!-- Konten CV -->
-        <div class="content">
-            <!-- Informasi Pribadi -->
-            <div class="section">
-                <h2>📋 Informasi Pribadi</h2>
-                <div class="info-grid">
-                    <div class="info-label">NIM:</div>
-                    <div class="info-value">5054241047</div>
-                    
-                    <div class="info-label">Email:</div>
-                    <div class="info-value">email@example.com</div>
-                    
-                    <div class="info-label">Telepon:</div>
-                    <div class="info-value">+62 812-3456-7890</div>
-                    
-                    <div class="info-label">Alamat:</div>
-                    <div class="info-value">Jakarta, Indonesia</div>
-                    
-                    <div class="info-label">Tanggal Lahir:</div>
-                    <div class="info-value">1 Januari 2000</div>
+
+    <div class="resume-container">
+        <div class="main-column">
+            
+            <div class="header-container">
+                <img src="Photo.jpeg" alt="Marvel Mahanara" class="profile-photo">
+                <div class="header-name">
+                    <h1>MARVEL<br>MAHANARA</h1>
+                    <p>ARTIFICIAL INTELLIGENCE ENGINEERING STUDENT</p>
                 </div>
             </div>
+
+            <div class="section-title">Projects & Applications</div>
             
-            <!-- Pendidikan -->
-            <div class="section">
-                <h2>🎓 Pendidikan</h2>
-                <div class="project-card">
-                    <h3>Universitas Nama Universitas</h3>
-                    <p><strong>Program Studi:</strong> Teknik Informatika</p>
-                    <p><strong>Tahun:</strong> 2020 - Sekarang</p>
-                    <p><strong>IPK:</strong> 3.75 / 4.00</p>
+            <div class="item">
+                <div class="item-title">
+                    <a href="https://github.com/Sjankaczar/Final-Project-Pembelajaran-Mesin-x-Data-Mining-Kelompok-11" target="_blank">
+                        Chest X-Ray Machine Learning Model <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                <div class="item-subtitle">Machine Learning & Data Mining</div>
+                <div class="description">
+                    Developed a single-notebook pipeline implementation for automated clinical label extraction from radiology reports (Chest X-ray). Integrated image-based, text-based (using synthetic captions), hybrid (multimodal), and ensemble strategies to optimize accuracy.
                 </div>
             </div>
-            
-            <!-- Keahlian -->
-            <div class="section">
-                <h2>💻 Keahlian</h2>
-                <div class="skills">
-                    <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">CSS</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">PHP</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Git</span>
+
+            <div class="item">
+                <div class="item-title">
+                    <a href="https://github.com/Fortwikszz/Project-M---OOP-Final-Project" target="_blank">
+                        Project M - 2D Souls-like Game <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                <div class="item-subtitle">OOP Final Project</div>
+                <div class="description">
+                    Programmed an engaging 2D top-down game inspired by the souls-like genre. Focused on implementing Object-Oriented Programming (OOP) principles for core combat mechanics and system architecture.
                 </div>
             </div>
-            
-            <!-- Aplikasi yang Pernah Dibuat -->
-            <div class="section">
-                <h2>🚀 Aplikasi & Proyek yang Pernah Dibuat</h2>
-                
-                <div class="project-card">
-                    <h3>1. Sistem Manajemen Perpustakaan</h3>
-                    <p><strong>Teknologi:</strong> PHP, MySQL, Bootstrap</p>
-                    <p><strong>Deskripsi:</strong> Aplikasi web untuk mengelola peminjaman dan pengembalian buku di perpustakaan. Fitur mencakup manajemen anggota, katalog buku, dan laporan peminjaman.</p>
-                    <p><strong>Tahun:</strong> 2023</p>
+
+            <div class="item">
+                <div class="item-title">
+                    <a href="https://github.com/Eatherrr/Fp-LBE-GIGA" target="_blank">
+                        Pokémon Based Fan Game <i class="fas fa-external-link-alt"></i>
+                    </a>
                 </div>
-                
-                <div class="project-card">
-                    <h3>2. Aplikasi To-Do List Mobile</h3>
-                    <p><strong>Teknologi:</strong> React Native, Firebase</p>
-                    <p><strong>Deskripsi:</strong> Aplikasi mobile untuk manajemen tugas harian dengan fitur notifikasi, kategori, dan sinkronisasi cloud.</p>
-                    <p><strong>Tahun:</strong> 2024</p>
-                </div>
-                
-                <div class="project-card">
-                    <h3>3. Website Portfolio Pribadi</h3>
-                    <p><strong>Teknologi:</strong> HTML, CSS, JavaScript</p>
-                    <p><strong>Deskripsi:</strong> Website portfolio interaktif dengan animasi modern untuk menampilkan proyek-proyek yang telah dikerjakan.</p>
-                    <p><strong>Tahun:</strong> 2024</p>
-                </div>
-                
-                <div class="project-card">
-                    <h3>4. Chatbot Customer Service (Final Project)</h3>
-                    <p><strong>Teknologi:</strong> Python, Natural Language Processing, TensorFlow</p>
-                    <p><strong>Deskripsi:</strong> Chatbot berbasis AI untuk menjawab pertanyaan customer service secara otomatis menggunakan machine learning.</p>
-                    <p><strong>Tahun:</strong> 2025</p>
+                <div class="item-subtitle">Game Development</div>
+                <div class="description">
+                    Created an interactive fan game based on Pokémon mechanics, showcasing logic implementation and game state management.
                 </div>
             </div>
-            
-            <!-- Aplikasi Web untuk Final Project -->
-            <div class="section">
-                <h2>🎯 Rencana Aplikasi Web untuk Final Project</h2>
-                <div class="project-card">
-                    <h3>E-Learning Platform dengan AI Assistant</h3>
-                    <p><strong>Teknologi yang Akan Digunakan:</strong> React.js, Node.js, Express, MongoDB, OpenAI API</p>
-                    <p><strong>Deskripsi Proyek:</strong></p>
-                    <p>Sebuah platform pembelajaran online yang dilengkapi dengan asisten AI untuk membantu siswa dalam memahami materi. Platform ini akan memiliki fitur-fitur seperti:</p>
-                    <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
-                        <li>Video pembelajaran interaktif dengan timestamp</li>
-                        <li>AI chatbot yang bisa menjawab pertanyaan terkait materi</li>
-                        <li>Quiz otomatis dengan analisis hasil belajar</li>
-                        <li>Forum diskusi antar siswa dan pengajar</li>
-                        <li>Dashboard progress belajar dengan visualisasi data</li>
-                        <li>Sistem rekomendasi materi berdasarkan performa siswa</li>
+
+            <div class="section-title">Final Project Plan (Web Programming)</div>
+            <div class="item">
+                <div class="item-title">Web-Based 2D Game with AI Opponent</div>
+                <div class="description">
+                    Planning to build an interactive 2D game playable directly in the web browser using HTML5 Canvas and JavaScript. Key features will include:
+                    <ul>
+                        <li>Implementing core game mechanics and rendering within the browser environment.</li>
+                        <li>Developing AI algorithms to control enemy behavior, movement, and decision-making.</li>
+                        <li>Creating dynamic level progression and real-time score tracking systems.</li>
                     </ul>
-                    <p style="margin-top: 10px;"><strong>Target Penyelesaian:</strong> Juni 2026</p>
                 </div>
             </div>
-            
-            <!-- Pekerjaan Impian -->
-            <div class="section">
-                <h2>✨ Pekerjaan Impian</h2>
-                <div class="dream-job-box">
-                    <h3>Full Stack Developer / AI Engineer</h3>
-                    <p>
-                        Saya bermimpi bekerja sebagai Full Stack Developer atau AI Engineer di perusahaan teknologi global seperti Google, Microsoft, atau startup unicorn. 
-                        Saya ingin berkontribusi dalam mengembangkan solusi teknologi yang berdampak positif bagi jutaan pengguna di seluruh dunia.
-                    </p>
-                    <p style="margin-top: 15px;">
-                        Khususnya, saya tertarik pada pengembangan aplikasi berbasis AI yang dapat membantu meningkatkan kualitas pendidikan dan aksesibilitas 
-                        pembelajaran bagi semua orang, terutama di negara berkembang.
-                    </p>
+
+            <div class="section-title">Dream Job</div>
+            <p class="description">
+                My dream is to work as a <strong>Game Developer or AI Engineer</strong> at leading game studios or global tech companies. I am deeply passionate about blending artificial intelligence with interactive entertainment to create immersive, intelligent gameplay experiences and innovative technological solutions.
+            </p>
+        </div>
+
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-title">Contact & Links</div>
+                <div class="sidebar-content">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i> +62 851-1761-6247
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i> marvelmahanara39@gmail.com
+                    </div>
+                    
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/marvel-mahanara-355a71274/" target="_blank" class="social-icon" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Eatherrr" target="_blank" class="social-icon" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/eatherrr._?igsh=MWw0cnFjYXhwaTR2ZQ==" target="_blank" class="social-icon" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Pengalaman Organisasi -->
-            <div class="section">
-                <h2>👥 Pengalaman Organisasi</h2>
-                <div class="project-card">
-                    <h3>Ketua Divisi IT - Himpunan Mahasiswa</h3>
-                    <p><strong>Periode:</strong> 2024 - 2025</p>
-                    <p>Bertanggung jawab mengelola website organisasi dan sistem informasi acara.</p>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Education</div>
+                <div class="sidebar-content">
+                    <div class="sidebar-item">
+                        <strong>Institut Teknologi Sepuluh Nopember</strong><br>
+                        Artificial Intelligence Engineering<br>
+                        2024 - Present
+                    </div>
+                    <div class="sidebar-item">
+                        <strong>MAN 2 Mataram</strong><br>
+                        High School<br>
+                        2021 - 2024
+                    </div>
+                    <div class="sidebar-item">
+                        <strong>SMP IT Bukit Quran Nusantara</strong><br>
+                        Middle School<br>
+                        2018 - 2020
+                    </div>
                 </div>
             </div>
-            
-            <!-- Kontak -->
-            <div class="section">
-                <h2>📞 Kontak</h2>
-                <div class="contact-links">
-                    <a href="mailto:email@example.com">📧 Email</a>
-                    <a href="https://linkedin.com/in/username" target="_blank">💼 LinkedIn</a>
-                    <a href="https://github.com/username" target="_blank">💻 GitHub</a>
-                    <a href="https://portfolio.com" target="_blank">🌐 Portfolio</a>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Organizational Experience</div>
+                <div class="sidebar-content">
+                    <div class="sidebar-item">
+                        <strong>Ini Lho ITS Forda Lombok</strong><br>
+                        Documentation Division Member<br>
+                        2024 - 2025
+                    </div>
+                    <div class="sidebar-item">
+                        <strong>SMP IT Bukit Quran Nusantara</strong><br>
+                        Student Council Treasurer<br>
+                        2019 - 2020
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Expertise & Skills</div>
+                <div class="sidebar-content">
+                    • Python<br>
+                    • Machine Learning / AI Integration<br>
+                    • Data Mining / OOP<br>
+                    • MySQL<br>
+                    • Excel / Word / PowerPoint<br>
+                    • Canva<br>
+                    • Figma
                 </div>
             </div>
         </div>
     </div>
+
 </body>
 </html>
